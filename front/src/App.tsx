@@ -1,11 +1,16 @@
-import React from "react"
+import Header from './header.tsx'
+import Main from './main'
+import Footer from './footer.tsx'
+import '../styles/app.css' 
 
 function App() {
-  return (
-    <div>
-      <h1>Dashboard Financeiro</h1>
-    </div>
-  )
+    return (
+    <>
+        <Header/>
+        <Main/>
+        <Footer/>
+    </>
+    )
 }
 
 export default App
