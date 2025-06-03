@@ -1,7 +1,7 @@
-import Header from './header.tsx'
+import Header from './components/header.tsx'
 import Main from './main'
-import Footer from './footer.tsx'
-import '../styles/app.css' 
+import Footer from './components/footer.tsx'
+import './styles/app.css'
 
 function App() {
     return (
@@ -9,8 +9,10 @@ function App() {
         <Header/>
         <Main/>
         <Footer/>
+        
     </>
     )
 }
+
 
 export default App

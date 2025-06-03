@@ -22,13 +22,13 @@ function Header() {
                 <h1>NOIR FINANCE</h1>
                 <p>Corporate Dashboard</p>
             </div>
-            <nav className="links">
-                <a href="overview">Overview</a>
-                <a href="transactions">Transactions</a>
-                <a href="reports">Reports</a>
-                <a href="goals">Goals</a>
-                <a href="settings">Settings</a>
-            </nav>
+                <nav className="links">
+                    <a href="/">Overview</a>
+                    <a href="transactions">Transactions</a>
+                    <a href="reports">Reports</a>
+                    <a href="goals">Goals</a>
+                    <a href="settings">Settings</a>
+                </nav>
             <div className="interaction">
                 <div className="ConteinerTimer" onMouseEnter={() => setShowTimeOptions(true)} onMouseLeave={() => setShowTimeOptions(false)}>
                     <div className="currentTime">
