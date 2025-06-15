@@ -1,0 +1,118 @@
+.chartContainer {
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    background: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #f8fafc;
+}
+
+.chartTitle {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.chartWrapper {
+    display: flex;
+    height: 200px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.y-tick {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.y-label {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    width: 20px;
+}
+
+.gridLine {
+    position: absolute;
+    left: 25px;
+    right: 0;
+    height: 1px;
+    background-color: #334155;
+    z-index: 1;
+}
+
+.barContainer {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+    gap: 10px;
+    height: 100%;
+}
+
+.barWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.barBG {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.3s ease;
+    position: relative;
+    min-height: 2px; 
+}
+
+.barValue {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(30, 41, 59, 0.9);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #e2e8f0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.barWrapper:hover .barValue {
+    opacity: 1;
+}
+
+.x-label {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-top: 5px;
+}
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+}

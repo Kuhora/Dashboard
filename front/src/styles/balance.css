@@ -1,0 +1,190 @@
+.balanceContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.transactionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #334155;
+}
+
+.transactionsHeader h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.buttonViewAll {
+  background: #334155;
+  color: #cbd5e1;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.buttonViewAll:hover {
+  background: #3f4d66;
+  color: white;
+}
+
+.transactionsList {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 350px;
+  padding-right: 0.5rem;
+}
+
+.transactionsList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.transactionsList::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 10px;
+}
+
+.transactionsList::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 10px;
+}
+
+.transactionItem {
+  padding: 1.1rem;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid #334155;
+  transition: all 0.3s ease;
+}
+
+.transactionItem:hover {
+  background: rgba(30, 41, 59, 0.8);
+  border-color: #475569;
+}
+
+.transactionDate {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.transactionDate::before {
+  content: "•";
+  color: #64748b;
+}
+
+.transactionDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transactionInfos {
+  flex: 1;
+}
+
+.transactionDesc {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.transactionRef {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.transactionBalance {
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  background: rgba(30, 41, 59, 0.7);
+}
+
+.positive {
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.1);
+}
+
+.negative {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+}
+
+.TotalCash {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid #334155;
+}
+
+.TotalCashHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.TotalCash h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.info-icon {
+  background: #334155;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.TotalBusCheck {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  letter-spacing: -1px;
+}
+
+.lastUpdated {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 1.5rem;
+  text-align: right;
+  font-style: italic;
+}
+
+.loading, .error {
+  padding: 30px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+.loading {
+  background: rgba(30, 41, 59, 0.5);
+  color: #94a3b8;
+}
+
+.error {
+  background: rgba(127, 29, 29, 0.3);
+  color: #fecaca;
+}

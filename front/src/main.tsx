@@ -3,13 +3,26 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import Greetings from './components/greetings.tsx'
 import { Balance } from './components/balance';
+import ChartBalance from './components/chartBalance.tsx';
+import './styles/chartBalance.css';
 
 function Main() {
   return (
-    <main>
-      <Greetings userName={''}/>
-      <Balance/>
-      <p>Conteúdo principal aqui</p>
+    <main className="mainContent">
+      <div className="dashboardLayout">
+        <div className="card greetingsCard">
+          <Greetings />
+        </div>
+        
+        <div className="card transactionsCard">
+          <Balance />
+        </div>
+        
+        <div className="card chartCard">
+          <ChartBalance />
+        </div>
+        
+        </div>
     </main>
   )
 }

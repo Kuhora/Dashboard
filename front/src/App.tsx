@@ -1,18 +1,17 @@
-import Header from './components/header.tsx'
-import Main from './main'
-import Footer from './components/footer.tsx'
-import './styles/app.css'
+import React from 'react';
+import Header from './components/Header';
+import Main from './main';
+import Footer from './components/Footer';
+import './styles/app.css';
 
 function App() {
-    return (
-    <>
-        <Header/>
-        <Main/>
-        <Footer/>
-        
-    </>
-    )
+  return (
+    <div className="appContainer">
+      <Header />
+      <Main />
+      <Footer />
+    </div>
+  );
 }
 
-
-export default App
+export default App;

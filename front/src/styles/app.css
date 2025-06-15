@@ -1,8 +1,153 @@
-body, html, #root {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #2c3d52;  
-    color: white; 
-    font-family: 'Montserrat', sans-serif;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a; 
+  color: #f1f5f9;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+}
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+}
+
+h1, h2, h3 {
+  color: #f8fafc;
+}
+
+.loading, .error {
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.loading {
+  background-color: #1e293b;
+  color: #94a3b8;
+}
+
+.error {
+  background-color: #7f1d1d;
+  color: #fecaca;
+}
+
+.greetingsContainer h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.greetingsContainer h2 {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+}
+
+.accountItem h3 {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+.accountItem p {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.transactionItem {
+  padding: 1rem 0;
+  border-bottom: 1px solid #334155;
+}
+
+.transactionDate {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+.transactionDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.viewAll {
+  color: #60a5fa;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cashBalance {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.chartWrapper {
+  display: flex;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.y-label {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.gridLine {
+  height: 1px;
+  background-color: #334155;
+}
+
+.barsContainer {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  gap: 10px;
+  height: 100%;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.x-label {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin-top: 5px;
 }
