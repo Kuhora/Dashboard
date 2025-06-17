@@ -6,17 +6,32 @@
 
 .transactionsHeader {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #334155;
 }
 
+@media (min-width: 640px) {
+  .transactionsHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .transactionsHeader h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #ffffff;
   font-weight: 600;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .transactionsHeader h2 {
+    font-size: 1.5rem;
+  }
 }
 
 .buttonViewAll {
@@ -28,6 +43,14 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  font-size: 0.9rem;
+  align-self: flex-end;
+}
+
+@media (min-width: 640px) {
+  .buttonViewAll {
+    align-self: center;
+  }
 }
 
 .buttonViewAll:hover {
@@ -43,7 +66,7 @@
 }
 
 .transactionsList::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 .transactionsList::-webkit-scrollbar-track {
@@ -57,12 +80,18 @@
 }
 
 .transactionItem {
-  padding: 1.1rem;
+  padding: 1rem;
   border-radius: 12px;
   margin-bottom: 0.8rem;
   background: rgba(30, 41, 59, 0.5);
   border: 1px solid #334155;
   transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .transactionItem {
+    padding: 1.1rem;
+  }
 }
 
 .transactionItem:hover {
@@ -71,13 +100,19 @@
 }
 
 .transactionDate {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #94a3b8;
   margin-bottom: 0.5rem;
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .transactionDate {
+    font-size: 0.85rem;
+  }
 }
 
 .transactionDate::before {
@@ -87,8 +122,17 @@
 
 .transactionDetails {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+@media (min-width: 640px) {
+  .transactionDetails {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 
 .transactionInfos {
@@ -98,21 +142,35 @@
 .transactionDesc {
   font-weight: 500;
   color: #ffffff;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 0.3rem;
 }
 
+@media (min-width: 768px) {
+  .transactionDesc {
+    font-size: 1.1rem;
+  }
+}
+
 .transactionRef {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #94a3b8;
 }
 
 .transactionBalance {
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   padding: 0.3rem 0.8rem;
   border-radius: 8px;
   background: rgba(30, 41, 59, 0.7);
+  text-align: right;
+}
+
+@media (min-width: 640px) {
+  .transactionBalance {
+    text-align: center;
+    font-size: 1.25rem;
+  }
 }
 
 .positive {
@@ -127,10 +185,16 @@
 
 .TotalCash {
   margin-top: 2rem;
-  padding: 1.5rem;
+  padding: 1.25rem;
   border-radius: 16px;
   background: rgba(30, 41, 59, 0.7);
   border: 1px solid #334155;
+}
+
+@media (min-width: 768px) {
+  .TotalCash {
+    padding: 1.5rem;
+  }
 }
 
 .TotalCashHeader {
@@ -142,31 +206,52 @@
 
 .TotalCash h3 {
   color: #ffffff;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .TotalCash h3 {
+    font-size: 1.25rem;
+  }
 }
 
 .info-icon {
   background: #334155;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  .info-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+}
+
 .TotalBusCheck {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin: 0.5rem 0;
   letter-spacing: -1px;
 }
 
+@media (min-width: 768px) {
+  .TotalBusCheck {
+    font-size: 2.5rem;
+  }
+}
+
 .lastUpdated {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #64748b;
   margin-top: 1.5rem;
   text-align: right;
@@ -174,9 +259,10 @@
 }
 
 .loading, .error {
-  padding: 30px;
+  padding: 1.5rem;
   text-align: center;
   border-radius: 12px;
+  margin: 1rem 0;
 }
 
 .loading {
@@ -187,4 +273,10 @@
 .error {
   background: rgba(127, 29, 29, 0.3);
   color: #fecaca;
+}
+
+@media (min-width: 768px) {
+  .loading, .error {
+    padding: 2rem;
+  }
 }

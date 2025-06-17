@@ -8,27 +8,63 @@
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: #f8fafc;
+    overflow: hidden;
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .chartTitle {
     color: #ffffff;
     font-size: 1.2rem;
-    margin-bottom: 20px;
-    text-align: center;
+    margin: 0;
+}
+
+.timeFilter {
+    display: flex;
+    gap: 8px;
+}
+
+.timeFilterBtn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #334155;
+    color: #e2e8f0;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+}
+
+.timeFilterBtn:hover {
+    background-color: #475569;
+}
+
+.timeFilterBtn.active {
+    background-color: #7c3aed;
+    color: white;
+    font-weight: bold;
 }
 
 .chartWrapper {
     display: flex;
-    height: 200px;
+    height: 250px;
     margin-bottom: 20px;
     position: relative;
+    width: 100%;
 }
 
 .y-axis {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
+    width: 40px;
     margin-right: 10px;
 }
 
@@ -40,14 +76,16 @@
 }
 
 .y-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #94a3b8;
-    width: 20px;
+    width: 100%;
+    text-align: right;
+    padding-right: 5px;
 }
 
 .gridLine {
     position: absolute;
-    left: 25px;
+    left: 35px;
     right: 0;
     height: 1px;
     background-color: #334155;
@@ -58,17 +96,19 @@
     display: flex;
     flex-grow: 1;
     align-items: flex-end;
-    gap: 10px;
+    gap: 12px;
     height: 100%;
+    min-width: 0;
 }
 
 .barWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
+    flex: 1;
     height: 100%;
     justify-content: flex-end;
+    min-width: 0;
 }
 
 .barBG {
@@ -81,9 +121,9 @@
 .bar {
     width: 100%;
     border-radius: 4px 4px 0 0;
-    transition: height 0.3s ease;
+    transition: height 0.3s ease, background-color 0.3s ease;
     position: relative;
-    min-height: 2px; 
+    min-height: 2px;
 }
 
 .barValue {
@@ -110,9 +150,162 @@
     font-size: 0.7rem;
     color: #94a3b8;
     margin-top: 5px;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+.chartFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+
 .loading {
     text-align: center;
     padding: 20px;
     color: #94a3b8;
+}
+
+.errorMessage {
+    text-align: center;
+    padding: 20px;
+    color: #ef4444;
+}
+
+.errorData {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+    .chartHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .timeFilter {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .chartWrapper {
+        flex-direction: column;
+        height: auto;
+        min-height: 250px;
+    }
+    
+    .y-axis {
+        flex-direction: row;
+        width: 100%;
+        height: 30px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .y-tick {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+    
+    .y-label {
+        text-align: left;
+        padding-right: 0;
+    }
+    
+    .gridLine {
+        left: 0;
+        top: 15px;
+        width: 100%;
+        height: 1px;
+    }
+    
+    .barContainer {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 480px) {
+    .chartContainer {
+        padding: 15px 10px;
+    }
+
+    .chartWrapper {
+        flex-direction: row !important;
+        height: 200px !important;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .y-axis {
+        flex-direction: column !important;
+        width: 30px !important;
+        height: 100% !important;
+        margin-right: 8px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .y-tick {
+        flex-direction: row !important;
+        align-items: center !important;
+        height: auto !important;
+    }
+
+    .y-label {
+        text-align: right !important;
+        padding-right: 5px !important;
+        font-size: 0.65rem !important;
+    }
+
+    .gridLine {
+        left: 30px !important;
+        top: auto !important;
+        width: 100vw !important;
+        height: 1px !important;
+    }
+
+    .barContainer {
+        min-width: max-content;
+        gap: 8px;
+    }
+
+    .barWrapper {
+        min-width: 28px;
+    }
+
+    .x-label {
+        font-size: 0.6rem;
+        white-space: nowrap;
+    }
+
+    .timeFilter {
+        gap: 4px;
+    }
+
+    .timeFilterBtn {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+        flex: 1;
+        text-align: center;
+    }
+
+    .chartWrapper::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .chartWrapper::-webkit-scrollbar-track {
+        background: #334155;
+    }
+    
+    .chartWrapper::-webkit-scrollbar-thumb {
+        background: #7c3aed;
+        border-radius: 2px;
+    }
 }
