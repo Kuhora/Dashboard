@@ -33,6 +33,9 @@ header {
 
 .links {
     display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;

@@ -156,16 +156,6 @@
     text-overflow: ellipsis;
 }
 
-.chartFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    font-size: 0.85rem;
-    color: #94a3b8;
-}
-
-
 .loading {
     text-align: center;
     padding: 20px;

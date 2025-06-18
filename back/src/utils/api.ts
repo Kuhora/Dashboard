@@ -1,4 +1,4 @@
-export const fetchWithAuth = async (url: string, options: RequestInit = {}) => {
+export const noirApiFetch = async (url: string, options: RequestInit = {}) => {
     const token = localStorage.getItem('token');
 
     const headers = {

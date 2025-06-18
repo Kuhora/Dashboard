@@ -10,7 +10,7 @@ interface ChartData {
     balanceHistory: ChartDataItem[];
 }
 
-const ChartBalance = () => {
+const NoirChart = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [chartData, setChartData] = useState<ChartDataItem[]>([]);
@@ -140,8 +140,6 @@ const ChartBalance = () => {
                     })}
                 </div>
             </div>
-            <div className="chartFooter">
-                </div>
                 <div className="lastUpdated">
                     {new Date().toLocaleDateString('en-US', { 
                         month: 'short', 
@@ -153,4 +151,4 @@ const ChartBalance = () => {
     );
 };
 
-export default ChartBalance;
+export default NoirChart;
