@@ -1,4 +1,4 @@
-# Noir Finance - Corporate Dashboard (DROPPED, I GAVE UP)
+# Noir Finance - Corporate Dashboard
 
 ![Screenshot_4](https://github.com/user-attachments/assets/4b9060d4-87a2-445a-8861-3d0928f3ebd5)
 
