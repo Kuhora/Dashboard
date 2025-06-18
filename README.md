@@ -31,3 +31,20 @@ Before starting, install:
 ```bash
 git clone https://github.com/your-username/noir-finance.git
 cd noir-finance
+
+
+## JWT Authentication System with React  
+
+This project demonstrates a frontend implementation of JWT (JSON Web Token) authentication with:  
+- Secure token storage in `localStorage`  
+- Automatic token injection in all requests via `fetchWithAuth`  
+- Global state management using Context API  
+- Redirect flow for invalid tokens (401)  
+
+## How It Works  
+
+### 1. **Token Storage**  
+- On login, the token is saved to both `localStorage` and `AuthContext` state  
+- Example:  
+  ```ts
+  localStorage.setItem('token', 'your-jwt-token-here');
