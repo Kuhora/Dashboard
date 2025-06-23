@@ -1,6 +1,6 @@
 # Noir Finance - Corporate Dashboard
 
-![Screenshot_4](https://github.com/user-attachments/assets/4b9060d4-87a2-445a-8861-3d0928f3ebd5)
+![Screenshot_2](https://github.com/user-attachments/assets/bbaeb240-17f2-4fb8-bd44-a2a4ca65be04)
 
 
 This project is a corporate dashboard for financial management, developed with Node.js/Express on the backend and React on the frontend. The application allows viewing account balances, recent transactions, and revenue charts over time.
