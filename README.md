@@ -25,6 +25,9 @@ Before starting, install:
 - Node.js (v18 or higher)
 - npm (v9 or higher)
 
+
+## I still intend to finish it, but I’ve put the project on hold.
+
 ## Project Setup
 
 1. Clone the repository:
@@ -48,3 +51,4 @@ This project demonstrates a frontend implementation of JWT (JSON Web Token) auth
 - Example:  
   ```ts
   localStorage.setItem('token', 'your-jwt-token-here');
+
